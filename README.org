@@ -1,0 +1,10 @@
+#+TITLE:  Org Life
+#+AUTHOR: Xavier Garrido
+
+* Org Life - README
+
+This repository is mostly a fork of cheeaun [[https://github.com/cheeaun/life][life]] repository. The main difference
+is the use of an =org= file instead of Markdown. Using the hierarchical
+structure of =org= file, I also have grouped main dates by topics,
+differentiating them by colors. See [[http://xgarrido.github.io/org-life]] for more
+details.
