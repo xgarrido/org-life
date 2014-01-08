@@ -14,8 +14,8 @@ var life = {
         }
     },
     config: {
-    	yearLength: 120, // 120px per year
-    	hideAge: true, // Hide age from year axis
+    	yearLength: 100,          // 120px per year
+    	hideAge: true,            // Hide age from year axis
     	customStylesheetURL: null // Custom stylesheet
     },
     start: function(){
@@ -60,17 +60,28 @@ var life = {
     	xhr.send();
     },
     parse: function(response){
-    	var list = response.match(/\*\s[0-9]+[^\n\r]+/ig);
+    	var list = response.match(/\*\s+[^\n\r]+/ig);
     	var data = [];
+        var color = '#bbbbbb';
     	list.forEach(function(l){
-    	    var matches = l.match(/\*\s+([\d\/\-\~present]+)\s(.*)/i);
-            // console.log(
-            var time = matches[1];
-    	    var text = matches[2];
-    	    data.push({
-    		time: life.parseTime(time),
-    		text: text
-    	    });
+    	    var matches = l.match(/\*\s+([0-9\d\/\-\~present]+)\s(.*)/i);
+            if (matches != null){
+                var time = matches[1];
+    	        var text = matches[2];
+    	        data.push({
+    		    time: life.parseTime(time),
+    		    text: text,
+                    color: color
+    	        });
+            } else {
+                if (/Personal/.test(l)){
+                    color = '#ff4136';
+                } else if (/Educational/.test(l)){
+                    color = '#3399cc';
+                } else if (/Professional/.test(l)){
+                    color = '#67ad00';
+                }
+            }
     	});
     	return data;
     },
@@ -78,7 +89,6 @@ var life = {
     	return response.match(/\#\+TITLE\:([^\r\n]+)/)[1];
     },
     parseTime: function(time, point){
-        console.log(time)
     	if (!point) point = 'start';
     	var data = {};
     	if (/^\~\d+$/.test(time)){ // ~YYYY
@@ -110,7 +120,6 @@ var life = {
     	    data.endDate = now.getDate();
     	}
         data.title = time.replace('-', '&nbsp-&nbsp');
-        console.log(data.title)
     	return data;
     },
     firstYear: null,
@@ -159,11 +168,11 @@ var life = {
     	var link = null;
     	//while(link = d.text.match(/\[([^\]]+)\]\(([^)"]+)(?: \"([^\"]+)\")?\)/)) {
     	while(link = d.text.match(/\[\[([^\]]+)\]\[([^\]]+)\]\]/)) {
-    	    d.text = d.text.replace(link[0], "<a href='" + link[1] + "'>" + link[2] + "</a>");
+    	    d.text = d.text.replace(link[0], '<a style="color: ' + d.color + '" href="' + link[1] + '">' + link[2] + '</a>');
     	}
 
     	return '<div class="event" style="margin-left: ' + offset.toFixed(2) + 'px">'
-    	    + '<div class="time" style="width: ' + width.toFixed(2) + 'px"></div>'
+    	    + '<div class="time" style="color: ' + d.color + ';width: ' + width.toFixed(2) + 'px"></div>'
     	    + '<b>' + d.time.title + '</b> ' + d.text + '&nbsp;&nbsp;'
     	    + '</div>';
     	return '';
