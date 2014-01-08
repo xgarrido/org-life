@@ -1,0 +1,10 @@
+#+TITLE: Xavier Garrido's life
+
+* Personal life
+** 06/08/1982 Nantes
+* Educationnal life
+** 09/2003-07/2005 Master of Astrophysics at [[http://www.u-psud.fr][Paris XI University]]
+** 09/2005-09/2008 PhD thesis in [[http://www.lal.in2p3.fr/][LAL]]
+* Profesionnal life
+** 10/2008-09/2009 Post doctoral position in [[http://www.kit.edu/english/][KIT]]
+** 10/2009-present Associate professor at [[http://www.u-psud.fr][Paris XI University]]
