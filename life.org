@@ -3,9 +3,14 @@
 * Personal life
 ** 06/08/1982 Born in [[https://www.google.fr/maps/preview#!q=nantes][Nantes]]
 * Educational life
+** 09/1985-06/1988 École maternelle at Bouguenais - les Couëts
+** 09/1988-06/1993 École le Bourneau at Bouguenais - les Couëts
+** 09/1993-06/1997 [[http://laneustrie.loire-atlantique.e-lyco.fr/][Collège la Neustrie]] at Bougenais - les Couëts
+** 09/1997-06/2000 [[http://perrin-goussier.paysdelaloire.e-lyco.fr/][Lycée Jean Perrin]] at Rezé
 ** 09/2000-06/2002 DEUG of Science of the Matter at [[ thttp://www.univ-nantes.fr][Nantes University]]
 ** 09/2002-06/2003 Licence 3 of Fundamental Physics at [[http://www.u-psud.fr][Paris XI University]]
-** 09/2003-06/2005 Master of Astrophysics at [[http://www.u-psud.fr][Paris XI University]]
+** 09/2003-06/2004 Master 1 of Fundamental Physics at [[http://www.u-psud.fr][Paris XI University]]
+** 09/2004-06/2005 Master 2 of Astrophysics at [[http://www.u-psud.fr][Paris XI University]]
 ** 09/2005-09/2008 PhD thesis in [[http://www.lal.in2p3.fr/][LAL]]
 * Professional life
 ** 10/2008-09/2009 Post doctoral position in [[http://www.kit.edu/english/][KIT]]
